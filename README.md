@@ -1,0 +1,1 @@
+# paystack-automaticpallet-host-payment-gateway
