@@ -154,7 +154,7 @@
 	function payWithPaystack()
 	{
 		var handler = PaystackPop.setup({
-			key: 'pk_live_6f49a7f3d75715b82ff42c8ba4769ea628fd9c0a',
+			key: 'pk_live_xxxxxxxxxxxxxxxxxxxxxxxxx',
 			email: '<?php $emailAddr = $_GET['emailAddr']; echo $emailAddr; ?>',
 			amount: '<?php $sellingCurrencyAmount = $_GET["sellingcurrencyamount"]; echo $sellingCurrencyAmount; ?>',
 			callback: function(response) {
