@@ -11,7 +11,7 @@
 <?php
 		
 		
-		$key = "CvPp1i.........."; //replace ur 32 bit secure key , Get your secure key from your Reseller Control panel
+		$key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; //replace ur 32 bit secure key , Get your secure key from your Reseller Control panel
 		
 		//This filter removes data that is potentially harmful for your application. It is used to strip tags and remove or encode unwanted characters.
 		$_GET = filter_var_array($_GET, FILTER_SANITIZE_STRING);
@@ -82,7 +82,7 @@
 			
 			//Insert the values into the database. 
 			
-			if ($conn = mysqli_connect("DBHost", "username", "password", "table")) 
+			/*if ($conn = mysqli_connect("DBHost", "username", "password", "table")) 
 				// replace the DB parameters with yours
 			{
 				if ($query = mysqli_query($conn, "INSERT INTO records (paymenttypeid, transid, userid, usertype, transactiontype, invoiceids, debitnoteids, description, sellingcurrencyamount, accountingcurrencyamount, redirecturl, checksum) VALUES('$paymentTypeId', '$transId', '$userId', '$userType', '$transactionType', '$invoiceIds', '$debitNoteIds', '$description', '$sellingCurrencyAmount', '$accountingCurrencyAmount', '$redirectUrl', '$checksum')")) 
@@ -97,69 +97,32 @@
 			else 
 			{
 				die("Could not connect to mysql");
-			}
+			}*/
 ?>
 
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <script type="text/javascript">
-	var verifyTransaction = createAjaxObject();
-	function createAjaxObject()
-	{
-		var xhttp;
-		try 
-		{
-			if (window.XMLHttpRequest)
-			{
-				try 
-				{
-					xhttp = new XMLHttpRequest();
-				}
-				catch(e)
-				{
-					console.log(e);
-				}
-			}
-			else 
-			{
-				try 
-				{
-					xhttp = new ActiveXObject("Microsoft.XMLHTTP");
-				}
-				catch(e)
-				{
-					console.log(e);
-				}
-			}
-			if (xhttp)
-			{
-				try 
-				{
-					return xhttp;
-				}
-				catch(e)
-				{
-					console.log("Error trying to create ajax object: " + e);
-				}
-			}
-			else 
-			{
-				console.log("Could not create ajax object");
-			}
-		}
-		catch(e)
-		{
-			console.log(e);
-		}
-	}
-	function payWithPaystack()
-	{
+	function payWithPaystack(){
 		var handler = PaystackPop.setup({
-			key: 'pk_live_xxxxxxxxxxxxxxxxxxxxxxxxx',
+			key: 'pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
 			email: '<?php $emailAddr = $_GET['emailAddr']; echo $emailAddr; ?>',
 			amount: '<?php $sellingCurrencyAmount = $_GET["sellingcurrencyamount"]; echo $sellingCurrencyAmount; ?>',
+			ref: '<?php $transId = $_GET["transid"]; echo $transId; ?>',
+			metadata: {
+				custom_fields: [
+				{
+					display_name: "Customer Name",
+					variable_name: "custom_name",
+					value: '<?php $name = $_GET['name']; echo $name; ?>',
+				}
+				]
+			},
 			callback: function(response) {
 				var data = response.reference; 
 				window.location = "postpayment.php?status=" + data;
+			},
+			onClose: function closeCurrentWindow() {
+				window.close();
 			}
 		});
 		handler.openIframe();

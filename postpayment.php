@@ -16,7 +16,7 @@
 		ini_set('display_errors','on');
 		error_reporting(-1);
 
-		$key = "CvPp1i.........."; //replace ur 32 bit secure key , Get your secure key from your Reseller Control panel
+		$key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; //replace ur 32 bit secure key , Get your secure key from your Reseller Control panel
 	    
 
 		$redirectUrl = $_SESSION['redirecturl'];  // redirectUrl received from foundation
@@ -35,7 +35,7 @@
 		**/
 		
 		require("lib/PayStack/Paystack.php");
-		$paystack = new Paystack('sk_live_................'); // replace with your PayStack secrete key
+		$paystack = new Paystack('sk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'); // replace with your PayStack secrete key
 		$verify = $paystack->transaction->verify([
 			'reference' => $status
 		]);
