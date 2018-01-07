@@ -107,7 +107,7 @@
 			key: 'pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
 			email: '<?php $emailAddr = $_GET['emailAddr']; echo $emailAddr; ?>',
 			amount: '<?php $sellingCurrencyAmount = $_GET["sellingcurrencyamount"]; $sellingCurrencyAmountInNaira = $sellingCurrencyAmount * 100; echo $sellingCurrencyAmountInNaira; ?>',
-			ref: '<?php $transId = $_GET["transid"]; echo $transId; ?>',
+			ref: '<?php $transId = $_GET["transid"]; echo $transId; ?>', // best to comment out and use Paystacks automatic random ref generated number while testing your integration, else you'll get a duplicate Ref error from Paystack
 			metadata: {
 				custom_fields: [
 				{
