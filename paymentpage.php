@@ -106,7 +106,7 @@
 		var handler = PaystackPop.setup({
 			key: 'pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
 			email: '<?php $emailAddr = $_GET['emailAddr']; echo $emailAddr; ?>',
-			amount: '<?php $sellingCurrencyAmount = $_GET["sellingcurrencyamount"]; echo $sellingCurrencyAmount; ?>',
+			amount: '<?php $sellingCurrencyAmount = $_GET["sellingcurrencyamount"]; $sellingCurrencyAmountInNaira = $sellingCurrencyAmount * 100; echo $sellingCurrencyAmountInNaira; ?>',
 			ref: '<?php $transId = $_GET["transid"]; echo $transId; ?>',
 			metadata: {
 				custom_fields: [
