@@ -18,7 +18,7 @@ The logic of the flow in this integration is quite simple:
 
 # Setup
 
-## STEP 1: Integrate this kit with your website (eg. using cPanel)
+## STEP 1: Integrate this kit with your web server (eg. cPanel)
 Unarchive the content of the repo into your server
 
 ## STEP 2: Select the correct Checksum Algorithm within your Reseller Control Panel:
