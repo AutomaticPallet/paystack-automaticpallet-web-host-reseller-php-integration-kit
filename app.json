@@ -3,5 +3,6 @@
   "description": "A PHP based Paystack payment integration script for Automatic Pallet Web Host Reseller",
   "repository": "https://github.com/AutomaticPallet/paystack-automaticpallet-web-host-reseller-php-integration-kit",
   "logo": "https://www.automaticpallet.com/wp-content/uploads/2017/02/Automatic-Pallet-Logo-Colouredwb800800.png",
-  "keywords": ["php", "static", "web-host", "reseller", "paystack", "payment-gateway", "automaticpallet", "ssl", "domain", "hosting", "g-suite", "business-email", "cloud"]
+  "keywords": ["php", "static", "web-host", "reseller", "paystack", "payment-gateway", "automaticpallet", "ssl", "domain", "hosting", "g-suite", "business-email", "cloud"],
+  "addons": [ "memcachedcloud:30" ]
 }
