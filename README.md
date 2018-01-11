@@ -1,5 +1,5 @@
 # Paystack Automatic Pallet Web Host Reseller PHP Integration Kit
-Paystack's PHP payment gateway integration kit for Automatic Pallet's white label web host reseller platform. Become the "Web Host" with Nigeria's leading web host resseller. Get your web hosting business started instantly at no cost and using this Paystack PHP payment gateway integration kit.
+Paystack's PHP payment gateway integration kit for Automatic Pallet's white-labelled web host reseller platform. Become the "Web Host" with Nigeria's leading web host resseller. Get your web hosting business started instantly at no cost and using this Paystack PHP payment gateway integration kit.
 
 ## Prerequisite
 - Before you can use this script, you will need to have an Automatic Pallet Web Host reseller account. Create a free account now if you haven't already done so: https://host.automaticpallet.com/reseller.php?action=partnersite
