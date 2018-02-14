@@ -42,7 +42,7 @@ You can Add or Modify your current/preferred Payment Gateway within your Reselle
 - Payment Gateway Access Level for Customers / Sub-Resellers: Select appropriate Access Levels for your Customers / Sub-Resellers.
 - Send me a Reminder if a transaction is pending for more than x days: In case you have not yet accepted a payment sent to you via this Payment Gateway, you can get e-mail reminders sent to you daily after x number of days from the payment date, until you either Approve or Decline these payments.
 - Display Position: If you plan on adding multiple Payment Gateways you can select the position in which you wish to display this Gateway on your Payment Page.
-- Checksum Algorithm: Select MD5 if you have downloaded the latest Integration Kit (version 2 or above) or have followed the upgrade instructions listed in Step 1. Select Addler 32 only if you are still using an older kit and haven't yet upgraded.
+- Checksum Algorithm: Select MD5
 
 ## STEP 4: Preparation on your Server
 On your own server, upload all the files from this integration kit. Some of the files included are:
